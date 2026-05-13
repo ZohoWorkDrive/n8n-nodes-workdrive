@@ -1,0 +1,58 @@
+{
+  "name": "n8n-nodes-workdrive",
+  "version": "1.0.0",
+  "description": "n8n community node for Zoho WorkDrive — upload, download, manage files and folders, share links",
+  "license": "MIT",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "zoho",
+    "workdrive",
+    "file-management",
+    "cloud-storage",
+    "automation"
+  ],
+  "homepage": "https://github.com/ZohoWorkDrive/n8n-nodes-workdrive",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZohoWorkDrive/n8n-nodes-workdrive.git"
+  },
+  "author": {
+    "name": "Kamatchi kumaran",
+    "email": "kamatchi.kumaran@zohocorp.com"
+  },
+  "main": "index.js",
+  "scripts": {
+    "dev": "n8n-node dev",
+    "dev:external": "n8n-node dev --external-n8n",
+    "dev:n8n": "N8N_DIAGNOSTICS_ENABLED=false N8N_USER_FOLDER=${N8N_USER_FOLDER:-$HOME/.n8n-node-cli} N8N_DEV_RELOAD=true npx -y n8n@latest start",
+    "verify": "npm run build && npm run lint",
+    "build": "n8n-node build",
+    "build:watch": "n8n-node build --watch",
+    "lint": "n8n-node lint",
+    "lint:fix": "n8n-node lint --fix",
+    "release": "n8n-node release",
+    "prepublishOnly": "npm run build"
+  },
+  "files": ["dist"],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": ["dist/credentials/WorkDriveOAuth2Api.credentials.js"],
+    "nodes": [
+      "dist/nodes/WorkDrive/WorkDrive.node.js",
+      "dist/nodes/WorkDrive/WorkDriveTrigger.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@n8n/node-cli": "^0.29.1",
+    "@types/node": "^22.0.0",
+    "eslint": "^9.21.0",
+    "n8n-workflow": "*",
+    "typescript": "^5.1.6"
+  },
+  "overrides": { "eslint": "$eslint" },
+  "peerDependencies": { "n8n-workflow": "*" },
+  "bugs": {
+    "url": "https://github.com/ZohoWorkDrive/n8n-nodes-workdrive/issues"
+  }
+}

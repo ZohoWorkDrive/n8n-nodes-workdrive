@@ -1,0 +1,22 @@
+{
+  "node": "n8n-nodes-workdrive.workDrive",
+  "nodeVersion": "1.0",
+  "codexVersion": "1.0",
+  "categories": ["Productivity", "Files"],
+  "subcategories": {
+    "Files": ["File Management"]
+  },
+  "resources": {
+    "primaryDocumentation": [
+      {
+        "url": "https://www.zoho.com/workdrive/help/"
+      }
+    ],
+    "credentialDocumentation": [
+      {
+        "url": "https://www.zoho.com/workdrive/help/api/getting-started.html"
+      }
+    ]
+  },
+  "alias": ["zoho", "workdrive", "file", "cloud storage", "drive"]
+}
