@@ -18,8 +18,8 @@
     "url": "https://github.com/ZohoWorkDrive/n8n-nodes-workdrive.git"
   },
   "author": {
-    "name": "Kamatchi kumaran",
-    "email": "kamatchi.kumaran@zohocorp.com"
+    "name": "Zoho WorkDrive",
+    "url": "https://www.zoho.com/workdrive/"
   },
   "main": "index.js",
   "scripts": {
