@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-workdrive",
-  "version": "1.0.4",
+  "version": "1.0.2",
   "description": "n8n community node for Zoho WorkDrive — upload, download, manage files and folders, share links",
   "license": "MIT",
   "keywords": [
