@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-workdrive",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "n8n community node for Zoho WorkDrive — upload, download, manage files and folders, share links",
   "license": "MIT",
   "keywords": [
@@ -17,11 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/ZohoWorkDrive/n8n-nodes-workdrive.git"
   },
-  "author": {
-    "name": "Zoho WorkDrive",
-    "email": "integrations@zohoworkdrive.com",
-    "url": "https://www.zoho.com/workdrive/"
-  },
+  "author": "Zoho WorkDrive <integrations@zohoworkdrive.com> (https://www.zoho.com/workdrive/)",
   "main": "index.js",
   "scripts": {
     "dev": "n8n-node dev",
@@ -54,9 +50,6 @@
     "eslint": "^9.21.0",
     "n8n-workflow": "*",
     "typescript": "^5.1.6"
-  },
-  "overrides": {
-    "eslint": "$eslint"
   },
   "peerDependencies": {
     "n8n-workflow": "*"
