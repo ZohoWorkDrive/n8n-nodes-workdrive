@@ -17,7 +17,11 @@
     "type": "git",
     "url": "git+https://github.com/ZohoWorkDrive/n8n-nodes-workdrive.git"
   },
-  "author": "Zoho WorkDrive <integrations@zohoworkdrive.com> (https://www.zoho.com/workdrive/)",
+  "author": {
+    "name": "Zoho WorkDrive",
+    "email": "integrations@zohoworkdrive.com",
+    "url": "https://www.zoho.com/workdrive/"
+  },
   "main": "index.js",
   "scripts": {
     "dev": "n8n-node dev",
