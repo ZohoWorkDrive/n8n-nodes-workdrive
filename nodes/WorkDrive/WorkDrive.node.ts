@@ -106,7 +106,6 @@ export class WorkDrive implements INodeType {
 					{ name: 'Delete', value: 'deleteResource', description: 'Move a file to Trash', action: 'Delete a file' },
 					{ name: 'Download', value: 'downloadFile', description: 'Download a file as binary data', action: 'Download a file' },
 					{ name: 'Get', value: 'getInfo', description: 'Get metadata for a file', action: 'Get file info' },
-					{ name: 'Get Resource Properties', value: 'resourceProperty', description: 'Get resource properties (custom metadata) for a file', action: 'Get file resource properties' },
 					{ name: 'Move', value: 'moveResource', description: 'Move a file to another folder', action: 'Move a file' },
 					{ name: 'Rename', value: 'renameResource', description: 'Rename a file', action: 'Rename a file' },
 					{ name: 'Upload', value: 'uploadFile', description: 'Upload a file to a folder', action: 'Upload a file' },
@@ -230,7 +229,7 @@ export class WorkDrive implements INodeType {
 				displayOptions: { show: { resource: ['file'], operation: ['downloadFile'] } },
 			},
 
-			// ── File: Get Info / Resource Properties / Copy / Move / Rename / Delete ────────
+			// ── File: Get Info / Copy / Move / Rename / Delete ────────
 			{
 				displayName: 'File ID',
 				name: 'resourceId',
@@ -238,7 +237,7 @@ export class WorkDrive implements INodeType {
 				required: true,
 				default: '',
 				placeholder: 'e.g. abc123xyz',
-				displayOptions: { show: { resource: ['file'], operation: ['getInfo', 'resourceProperty', 'copyResource', 'moveResource', 'renameResource', 'deleteResource'] } },
+				displayOptions: { show: { resource: ['file'], operation: ['getInfo', 'copyResource', 'moveResource', 'renameResource', 'deleteResource'] } },
 			},
 			{
 				displayName: 'Destination Folder ID',
@@ -687,12 +686,6 @@ export class WorkDrive implements INodeType {
 					else if (operation === 'getInfo') {
 						const resourceId = this.getNodeParameter('resourceId', i) as string;
 						const resp = await apiGet(`${baseUrl}/files/${resourceId}`);
-						returnData.push(row((resp?.data ?? resp) as IDataObject));
-					}
-
-					else if (operation === 'resourceProperty') {
-						const resourceId = this.getNodeParameter('resourceId', i) as string;
-						const resp = await apiGet(`${baseUrl}/files/${resourceId}/resourceproperty`);
 						returnData.push(row((resp?.data ?? resp) as IDataObject));
 					}
 
