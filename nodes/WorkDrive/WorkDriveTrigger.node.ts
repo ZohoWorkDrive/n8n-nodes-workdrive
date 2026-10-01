@@ -115,8 +115,8 @@ const TEAM_EVENTS = [
 	{ name: 'Team Folder Created',                value: 'teamfolder_create',                description: 'When a team folder is created' },
 ];
 
+// eslint-disable-next-line @n8n/community-nodes/node-usable-as-tool
 export class WorkDriveTrigger implements INodeType {
-	// eslint-disable-next-line @n8n/community-nodes/node-usable-as-tool
 	description: INodeTypeDescription = {
 		displayName: 'Zoho WorkDrive Trigger',
 		name: 'workDriveTrigger',
@@ -126,7 +126,6 @@ export class WorkDriveTrigger implements INodeType {
 		subtitle: '={{$parameter["category"]}}',
 		description: 'Starts a workflow when a Zoho WorkDrive event occurs (requires WorkDrive Business plan)',
 		defaults: { name: 'WorkDrive Trigger' },
-		usableAsTool: false,
 		inputs: [],
 		outputs: [NodeConnectionTypes.Main],
 		credentials: [
