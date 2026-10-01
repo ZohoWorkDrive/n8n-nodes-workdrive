@@ -116,6 +116,7 @@ const TEAM_EVENTS = [
 ];
 
 export class WorkDriveTrigger implements INodeType {
+	// eslint-disable-next-line @n8n/community-nodes/node-usable-as-tool
 	description: INodeTypeDescription = {
 		displayName: 'Zoho WorkDrive Trigger',
 		name: 'workDriveTrigger',
