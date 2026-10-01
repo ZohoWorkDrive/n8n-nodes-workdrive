@@ -51,7 +51,7 @@ export class WorkDrive implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Zoho WorkDrive',
 		name: 'workDrive',
-		icon: 'file:workdrive.svg',
+		icon: { light: 'file:workdrive-light.svg', dark: 'file:workdrive-dark.svg' },
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["resource"] + ": " + $parameter["operation"]}}',

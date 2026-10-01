@@ -119,13 +119,12 @@ export class WorkDriveTrigger implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Zoho WorkDrive Trigger',
 		name: 'workDriveTrigger',
-		icon: 'file:workdrive.svg',
+		icon: { light: 'file:workdrive-light.svg', dark: 'file:workdrive-dark.svg' },
 		group: ['trigger'],
 		version: 1,
 		subtitle: '={{$parameter["category"]}}',
 		description: 'Starts a workflow when a Zoho WorkDrive event occurs (requires WorkDrive Business plan)',
 		defaults: { name: 'WorkDrive Trigger' },
-		usableAsTool: true,
 		inputs: [],
 		outputs: [NodeConnectionTypes.Main],
 		credentials: [
